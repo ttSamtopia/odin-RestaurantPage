@@ -1,0 +1,26 @@
+{
+  "name": "odin-restaurantpage",
+  "version": "1.0.0",
+  "description": "After a year of learning HTML, CSS, and JavaScript at Malmö University, I've been working through the projects in [The Odin Project](https://www.theodinproject.com/) curriculum.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttSamtopia/odin-RestaurantPage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ttSamtopia/odin-RestaurantPage/issues"
+  },
+  "homepage": "https://github.com/ttSamtopia/odin-RestaurantPage#readme",
+  "devDependencies": {
+    "webpack": "^5.111.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^6.0.0"
+  }
+}
