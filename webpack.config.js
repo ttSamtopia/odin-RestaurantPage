@@ -10,7 +10,7 @@ export default {
     },
     devtool: "eval-source-map",
     devServer: {
-        watchFiles: ["./src/index.html"],
+        watchFiles: ["./src/*"],
     },
     module: {
         rules: [
