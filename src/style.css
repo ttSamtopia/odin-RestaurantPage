@@ -89,4 +89,35 @@ nav button:active {
     background-color: var(--blue);
 }
 
+
+/* Home and Contact */
+
+#home img,
+#contact img {
+    width: 100%;
+    border-radius: var(--radius);
+    margin: 0 auto 1rem;
+}
+
+#home p,
+#contact p {
+    text-align: center;
+}
+
+#home-dates,
+#contact {
+    text-align: center;
+}
+
+#home-dates {
+    background-color: var(--blue);
+    border-radius: var(--radius);
+    margin-top: 1rem;
+    padding: 1.5rem;
+}
+
+#contact a {
+    color: var(--dark-brown);
+}
+
 }
