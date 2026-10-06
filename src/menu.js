@@ -120,7 +120,7 @@ function createMenuCard (menuItem) {
     domTextDescription.textContent = menuItem.info;
 
     if (menuItem.price >= 1000) {
-        let currentStringPrice = menuItem.price.toString();
+        let currentStringPrice = String(menuItem.price);
         let newStringPrice = `${currentStringPrice.substring(0,1)},${currentStringPrice.substring(1)}`;
         menuItem.price = newStringPrice;
     }
