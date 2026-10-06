@@ -6,8 +6,8 @@ const domNavButtons = document.querySelectorAll("header > nav > button");
 
 export const domContent = document.querySelector("#content");
 
-function changePage (event) {
-    const clickedPage = event.target.id.split("-")[1]
+function changePage(event) {
+    const clickedPage = event.target.id.split("-")[1];
     switch (clickedPage) {
         case document.body.dataset.page:
             break;
@@ -26,14 +26,17 @@ function changePage (event) {
     }
 }
 
-function disableCurrentNav (page) {
-    domNavButtons.forEach(button => {
-        if (button.id.split("-")[1] === page) { button.disabled = true; }
-        else { button.disabled = false; };
-    })
+function disableCurrentNav(page) {
+    domNavButtons.forEach((button) => {
+        if (button.id.split("-")[1] === page) {
+            button.disabled = true;
+        } else {
+            button.disabled = false;
+        }
+    });
 }
 
-domNavButtons.forEach(button => button.addEventListener("click", changePage));
+domNavButtons.forEach((button) => button.addEventListener("click", changePage));
 
 renderHomePage();
 disableCurrentNav("home");

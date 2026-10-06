@@ -11,7 +11,8 @@ export function renderHomePage() {
 
     const domImageBanner = document.createElement("img");
     domImageBanner.src = imageBanner;
-    domImageBanner.alt = "Chopper's Café logo surrounded by illustrations of Chopper and sweets";
+    domImageBanner.alt =
+        "Chopper's Café logo surrounded by illustrations of Chopper and sweets";
     domImageBanner.width = "800";
     domImageBanner.height = "450";
 
@@ -20,7 +21,8 @@ export function renderHomePage() {
 
     const domImageSpread = document.createElement("img");
     domImageSpread.src = imageSpread;
-    domImageSpread.alt = "Menu display: curry rice, omelet rice, pancake, parfait and two drinks";
+    domImageSpread.alt =
+        "Menu display: curry rice, omelet rice, pancake, parfait and two drinks";
     domImageSpread.width = "640";
     domImageSpread.height = "360";
 
@@ -31,16 +33,23 @@ export function renderHomePage() {
     domHomeDates.id = "home-dates";
 
     const domHeaderDates = document.createElement("h2");
-    domHeaderDates.textContent = "When we were open"
+    domHeaderDates.textContent = "When we were open";
 
     const domTextDates = document.createElement("p");
-    domTextDates.innerHTML = `We were open from December 24, 2025 to February 1, 2026,<br/>at BOX cafe&space on B2F of SHIBUYA109 in Tokyo.`
+    domTextDates.innerHTML = `We were open from December 24, 2025 to February 1, 2026,<br/>at BOX cafe&space on B2F of SHIBUYA109 in Tokyo.`;
 
     const domTextThanks = document.createElement("p");
     domTextThanks.textContent = "Thank you to everyone who came by.";
 
     domHomeDates.append(domHeaderDates, domTextDates, domTextThanks);
-    domHome.append(domHeaderPage, domImageBanner, domTextIntro, domImageSpread, domTextMenu, domHomeDates);
+    domHome.append(
+        domHeaderPage,
+        domImageBanner,
+        domTextIntro,
+        domImageSpread,
+        domTextMenu,
+        domHomeDates,
+    );
     domContent.innerHTML = "";
     domContent.append(domHome);
     document.body.dataset.page = "home";

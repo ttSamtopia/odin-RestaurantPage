@@ -103,7 +103,7 @@ const menu = {
     ],
 };
 
-function createMenuCard (menuItem) {
+function createMenuCard(menuItem) {
     const domMenuItem = document.createElement("div");
     domMenuItem.classList.add("menu-item");
 
@@ -121,7 +121,7 @@ function createMenuCard (menuItem) {
 
     if (menuItem.price >= 1000) {
         let currentStringPrice = String(menuItem.price);
-        let newStringPrice = `${currentStringPrice.substring(0,1)},${currentStringPrice.substring(1)}`;
+        let newStringPrice = `${currentStringPrice.substring(0, 1)},${currentStringPrice.substring(1)}`;
         menuItem.price = newStringPrice;
     }
 
@@ -129,11 +129,16 @@ function createMenuCard (menuItem) {
     domTextPrice.textContent = `${menuItem.price} yen`;
     domTextPrice.classList.add("price");
 
-    domMenuItem.append(domImageItem, domHeaderName, domTextDescription, domTextPrice);
+    domMenuItem.append(
+        domImageItem,
+        domHeaderName,
+        domTextDescription,
+        domTextPrice,
+    );
     return domMenuItem;
 }
 
-export function renderMenuPage () {
+export function renderMenuPage() {
     const domMenu = document.createElement("div");
     domMenu.id = "menu";
 
@@ -141,16 +146,16 @@ export function renderMenuPage () {
     domHeaderPage.textContent = "Menu";
 
     const domHeaderFood = document.createElement("h2");
-    domHeaderFood.textContent = "Food"
+    domHeaderFood.textContent = "Food";
 
     domMenu.append(domHeaderPage, domHeaderFood);
-    menu.food.forEach(menuItem => domMenu.append(createMenuCard(menuItem)));
+    menu.food.forEach((menuItem) => domMenu.append(createMenuCard(menuItem)));
 
     const domHeaderDrink = document.createElement("h2");
-    domHeaderDrink.textContent = "Drink"
+    domHeaderDrink.textContent = "Drink";
 
     domMenu.append(domHeaderDrink);
-    menu.drinks.forEach(menuItem => domMenu.append(createMenuCard(menuItem)));
+    menu.drinks.forEach((menuItem) => domMenu.append(createMenuCard(menuItem)));
 
     domContent.innerHTML = "";
     domContent.append(domMenu);
