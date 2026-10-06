@@ -90,6 +90,19 @@ nav button:active {
     background-color: var(--blue);
 }
 
+nav button:disabled {
+    opacity: 75%;
+    cursor: default;
+}
+
+nav button:disabled:hover {
+    background-color: var(--cream);
+}
+
+nav button:disabled:active {
+    background-color: var(--cream);
+}
+
 
 /* Home and Contact */
 

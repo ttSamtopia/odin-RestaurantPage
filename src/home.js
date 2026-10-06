@@ -43,4 +43,5 @@ export function renderHomePage() {
     domHome.append(domHeaderPage, domImageBanner, domTextIntro, domImageSpread, domTextMenu, domHomeDates);
     domContent.innerHTML = "";
     domContent.append(domHome);
+    document.body.dataset.page = "home";
 }

@@ -154,4 +154,5 @@ export function renderMenuPage () {
 
     domContent.innerHTML = "";
     domContent.append(domMenu);
+    document.body.dataset.page = "menu";
 }

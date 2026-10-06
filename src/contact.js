@@ -35,4 +35,5 @@ export function renderContactPage () {
     domContact.append(domImageChopper, domHeaderPlace, domTextPlace, domHeaderDates, domTextDates, domHeaderReservations, domTextReservationDate, domTextReservationBooking);
     domContent.innerHTML = "";
     domContent.append(domContact);
+    document.body.dataset.page = "contact";
 }
