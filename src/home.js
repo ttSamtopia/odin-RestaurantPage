@@ -17,7 +17,7 @@ export function renderHomePage() {
     domImageBanner.height = "450";
 
     const domTextIntro = document.createElement("p");
-    domTextIntro.innerHTML = `We were a One Piece cafe themed around Chopper, were he lived a peaceful life in the real world.<br/>Every dish and drink had a little bit of him in it.`;
+    domTextIntro.innerHTML = `We were a One Piece cafe themed around Chopper, where he lived a peaceful life in the real world.<br/>Every dish and drink had a little bit of him in it.`;
 
     const domImageSpread = document.createElement("img");
     domImageSpread.src = imageSpread;
