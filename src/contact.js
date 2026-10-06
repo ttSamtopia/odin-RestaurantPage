@@ -4,6 +4,9 @@ import imageChopper from "./img/chopper-sitting.png"
 export function renderContactPage () {
     const domContact = document.createElement("div");
     domContact.id = "contact";
+    
+    const domHeaderPage = document.createElement("h1");
+    domHeaderPage.textContent = "Contact";
 
     const domImageChopper = document.createElement("img");
     domImageChopper.src = imageChopper;
@@ -32,7 +35,7 @@ export function renderContactPage () {
     const domTextReservationBooking = document.createElement("p");
     domTextReservationBooking.innerHTML = `Guests booked through our official website: <a href="https://choppers-onepiece.theme-cafe.jp/" target="_blank" rel="noopener noreferrer">choppers-onepiece.theme-cafe.jp</a>`;
 
-    domContact.append(domImageChopper, domHeaderPlace, domTextPlace, domHeaderDates, domTextDates, domHeaderReservations, domTextReservationDate, domTextReservationBooking);
+    domContact.append(domHeaderPage, domImageChopper, domHeaderPlace, domTextPlace, domHeaderDates, domTextDates, domHeaderReservations, domTextReservationDate, domTextReservationBooking);
     domContent.innerHTML = "";
     domContent.append(domContact);
     document.body.dataset.page = "contact";
