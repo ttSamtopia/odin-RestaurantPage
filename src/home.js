@@ -6,8 +6,8 @@ export function renderHomePage() {
     const domHome = document.createElement("div");
     domHome.id = "home";
 
-    const domPageHeader = document.createElement("h1");
-    domPageHeader.textContent = "Chopper's Café";
+    const domHeaderPage = document.createElement("h1");
+    domHeaderPage.textContent = "Chopper's Café";
 
     const domImageBanner = document.createElement("img");
     domImageBanner.src = imageBanner;
@@ -30,8 +30,8 @@ export function renderHomePage() {
     const domHomeDates = document.createElement("div");
     domHomeDates.id = "home-dates";
 
-    const domDatesHeader = document.createElement("h2");
-    domDatesHeader.textContent = "When we were open"
+    const domHeaderDates = document.createElement("h2");
+    domHeaderDates.textContent = "When we were open"
 
     const domTextDates = document.createElement("p");
     domTextDates.innerHTML = `We were open from December 24, 2025 to February 1, 2026,<br/>at BOX cafe&space on B2F of SHIBUYA109 in Tokyo.`
@@ -39,8 +39,8 @@ export function renderHomePage() {
     const domTextThanks = document.createElement("p");
     domTextThanks.textContent = "Thank you to everyone who came by.";
 
-    domHomeDates.append(domDatesHeader, domTextDates, domTextThanks);
-    domHome.append(domPageHeader, domImageBanner, domTextIntro, domImageSpread, domTextMenu, domHomeDates);
+    domHomeDates.append(domHeaderDates, domTextDates, domTextThanks);
+    domHome.append(domHeaderPage, domImageBanner, domTextIntro, domImageSpread, domTextMenu, domHomeDates);
     domContent.innerHTML = "";
     domContent.append(domHome);
 }
