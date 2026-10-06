@@ -119,14 +119,14 @@ function createMenuCard(menuItem) {
     const domTextDescription = document.createElement("p");
     domTextDescription.textContent = menuItem.info;
 
-    if (menuItem.price >= 1000) {
-        let currentStringPrice = String(menuItem.price);
-        let newStringPrice = `${currentStringPrice.substring(0, 1)},${currentStringPrice.substring(1)}`;
-        menuItem.price = newStringPrice;
+    let itemPrice = menuItem.price;
+    if (itemPrice >= 1000) {
+        let currentStringPrice = String(itemPrice);
+        itemPrice = `${currentStringPrice.substring(0, 1)},${currentStringPrice.substring(1)}`;
     }
 
     const domTextPrice = document.createElement("p");
-    domTextPrice.textContent = `${menuItem.price} yen`;
+    domTextPrice.textContent = `${itemPrice} yen`;
     domTextPrice.classList.add("price");
 
     domMenuItem.append(
